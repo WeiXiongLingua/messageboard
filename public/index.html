@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment & History Board</title>
+    <!-- 引入 Tailwind CSS 官方 CDN 脚本 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer> </script>
+</head>
+
+<body class="bg-slate-50">
+
+    <div class="min-h-screen py-10 px-4">
+
+        <!-- 顶部标题 -->
+        <header
+            class="bg-white py-6 text-center font-mono text-3xl font-bold text-slate-800 rounded-xl shadow-sm max-w-4xl mx-auto">
+            Welcome to leave a comment here.
+        </header>
+
+        <!-- 中间表单区域 -->
+        <div class="max-w-4xl mx-auto my-10 flex items-center justify-center">
+            <form id="comment-form"
+                class="space-y-6 flex flex-col items-center w-full bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <input type="text" placeholder="Input your name" id="user-name"
+                    class="w-full max-w-2xl px-4 py-3 text-center text-lg border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400" />
+
+                <textarea id="user-comment"
+                    class="w-full max-w-2xl p-4 text-center border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400"
+                    placeholder="write something..." rows="4"></textarea>
+
+                <button type="submit"
+                    class="px-8 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-medium rounded-lg transition">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+        <!-- 标题与数量角标容器 -->
+        <div
+            class="max-w-4xl mx-auto border-2 rounded-xl flex items-center justify-between border-slate-300 pb-4 mb-4 px-4 pt-4 bg-white shadow-sm">
+            <h3 class="text-xl font-bold text-slate-800 font-mono">History</h3>
+            <span id="comment-count" class="text-xs font-medium bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">
+                3 comments
+            </span>
+        </div>
+
+        <!-- 留言列表容器 -->
+        <div id="comment-list"
+            class="max-w-4xl mx-auto flex space-y-6 flex-col [&>*]:bg-amber-50 [&>*]:border-2 [&>*]:border-amber-200 [&>*]:rounded-xl [&>*]:p-4">
+            <div>
+                <div class="flex items-center justify-between mb-1">
+                    <span class="font-semibold text-slate-800">Bob</span>
+                    <span class="text-xs text-slate-400">2 hours ago</span>
+                </div>
+                <p class="text-slate-700 text-sm">Hi, Software is cool.</p>
+            </div>
+
+            <div>
+                <div class="flex items-center justify-between mb-1">
+                    <span class="font-semibold text-slate-800">Wei</span>
+                    <span class="text-xs text-slate-400">1 hour ago</span>
+                </div>
+                <p class="text-slate-700 text-sm">Hi, mein Name ist Wei</p>
+            </div>
+
+            <div>
+                <div class="flex items-center justify-between mb-1">
+                    <span class="font-semibold text-slate-800">snowflake</span>
+                    <span class="text-xs text-slate-400">2 seconds ago</span>
+                </div>
+                <p class="text-slate-700 text-sm">snowflake ist gut.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
